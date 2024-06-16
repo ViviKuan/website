@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FF8FA3;
+    margin: 0;
+    font-family: "標楷體";
+    line-height: 1.2;
+}
+
+header {
+    background-image: linear-gradient(to bottom, #da627d, #FBB1BD);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+footer {
+    background-color: #F7CAD0;
+    color: #444444;
+    text-align: center;
+    padding: 10px;
+}
+
+nav {
+    background-color: #FF8FA3;
+    /*background-color: #FBB1BD;*/
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0; 
+    background-color: #F7CAD0;
+    border: 1px solid transparent;
+    border-radius: 0;
+    width: 130px;
+    z-index: 1;
+}
+
+.dropdown-menu .dropdown-item {
+    font-size: 20px;
+    color: #e29578;
+    text-align: center;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: inline-block; 
+    font-size: 30px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+.item {
+    margin-bottom: 10px;
+}
+
+.item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ce9898;
+}
+
+.item-name {
+    flex: 1;
+}
+
+.shopee-input-quantity {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.shopee-input-quantity .bt {
+    width: 30px;
+    height: 30px;
+    background-color: #f8f1f1;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.shopee-input-quantity .number {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.item-price {
+    flex: 1;
+    text-align: left;
+}
+
+.delete-btn {
+    flex: 1;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.delete-btn:hover {
+    background-color: #e60000;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.checkout {
+    margin-top: 30px;
+}
+
+.checkout h2 {
+    margin-bottom: 20px;
+}
+
+.checkout-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkout-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-form button:hover {
+    background-color: #0056b3;
+}
+
+/* 小型裝置（例如手機） */
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 10px 0; 
+    }
+    
+    nav {
+        padding: 10px 0;
+        text-align: center; 
+    }
+
+    .navbar-nav {
+        display: inline-block;
+        list-style: none;
+        padding: 0;
+        margin: 0 auto; 
+    }
+
+    .nav-item {
+        margin-bottom: 10px; 
+        width: 100%; 
+    }
+
+    .dropdown-menu {
+        position: static; 
+        width: 100%; 
+        box-shadow: none; 
+        border: none; 
+    }
+
+    .nav-item:hover .dropdown-menu {
+        display: block; 
+    }
+
+    .nav-link {
+        font-size: 18px; 
+        padding: 10px; 
+    }
+    
+    footer {
+        padding: 15px; 
+    }
+}

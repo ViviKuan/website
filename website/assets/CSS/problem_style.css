@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FF8FA3;
+    margin: 0;
+    font-family: "標楷體";
+    line-height: 1.2;
+}
+
+header {
+    background-image: linear-gradient(to bottom, #da627d, #FBB1BD);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+footer {
+    background-color: #F7CAD0;
+    color: #444444;
+    text-align: center;
+    padding: 10px;
+}
+
+nav {
+    background-color: #FF8FA3;
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #F7CAD0;
+    border: 1px solid transparent;
+    width: 110px; 
+    z-index: 1;
+}
+
+.dropdown-menu .dropdown-item {
+    font-size: 20px;
+    color: #e29578;
+    padding: 8px 12px;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    padding: 15px 0; 
+    font-size: 20px; 
+    display: block;
+}
+
+.text {
+    font-family: "標楷體";
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 參考該網頁https://abgne.tw/jquery/apply-jquery/slide-q-and-a-list.html*/
+#qaContent {
+    width: 500px;
+    margin: auto;
+}
+
+#qaContent h3 {
+    height: auto;
+    text-indent: 0;
+    padding: 10px;
+    color: white;
+    background: url(../image/background/background_3.jpg) no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+#qaContent ul.accordionPart {
+    margin: 10px 10px 50px 30px;
+}
+
+#qaContent ul.accordionPart li {
+    border-bottom: solid 1px #e3e3e3;
+    padding-bottom: 12px;
+    margin-top: 12px;
+}
+
+#qaContent ul.accordionPart li .qa_title,
+#qaContent ul.accordionPart li .qa_content {
+    padding: 10px 28px;
+    color: #1186ec;
+    background: url(../image/background/background_2.jpg) no-repeat;
+    background-size: cover;
+}
+
+#qaContent ul.accordionPart li .qa_content {
+    color: #666;
+}
+
+#qaContent ul.accordionPart li .qa_title_on {
+    text-decoration: underline;
+}
+
+/* 在小於 768px 的螢幕寬度下的 RWD 樣式 */
+@media screen and (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        width: auto;
+        background-color: transparent;
+        border: none;
+    }
+
+    .nav-item:hover .dropdown-menu {
+        display: block;
+        position: static;
+        width: auto;
+    }
+
+    .nav-link {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #qaContent {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+/* 在小於 576px 的螢幕寬度下的 RWD 樣式 */
+@media screen and (max-width: 576px) {
+    header {
+        padding: 10px 0;
+    }
+
+    .navbar-nav {
+        padding: 0;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+
+    #qaContent {
+        width: 95%;
+        margin: auto;
+    }
+}

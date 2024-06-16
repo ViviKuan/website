@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #FF8FA3;
+    margin: 0;
+    font-family: "標楷體";
+    line-height: 1.2;
+}
+
+header {
+    background-image: linear-gradient(to bottom, #da627d, #FBB1BD);
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #FF8FA3;
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: space-between; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    /*margin-bottom: 5px;*/
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #F7CAD0;
+    border: 1px solid transparent;
+    border-radius: 0;
+    width: 130px;
+    z-index: 1;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu .dropdown-item {
+    font-size: 20px;
+    color: #e29578;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 70px;
+    font-size: 20px;
+    display: block;
+}
+
+footer {
+    background-color: #F7CAD0;
+    color: #444444;
+    text-align: center;
+    padding: 25px;
+}
+
+h2 {
+    text-align: center;
+}
+
+article {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #444444;
+    border-radius: 10px;
+    background-color: #e1dcd4;
+    box-shadow: 0 4px 80px rgba(170, 39, 39, 0.453);
+    transform: translateY(20px);
+    animation: floatIn 1s ease-in-out forwards;
+    text-align: left;
+}
+
+@keyframes floatIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ul {
+    list-style-type: circle;
+    padding-left: 20px;
+}
+
+.data-item {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.data-item label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+    max-width: 200px;
+    width: auto;
+    text-align: left;
+}
+
+.highlight {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 10px;
+    width: 400px;
+    background-color: #e1dcd4;
+}
+
+.product-link {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #FFC1CC;
+    margin: 5px;
+    text-decoration: none;
+    color: #444444;
+}
+
+.product-link
+{
+    background-color: #FF8FA3;
+    color: white;
+}
+
+#order-history {
+    list-style-type: circle;
+    padding-left: 20px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+#order-history li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 80px rgba(0, 0, 0, 0.1);
+}
+
+.data-item label {
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        padding: 10px 0;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        width: auto;
+    }
+
+    .nav-item:hover .dropdown-menu {
+        display: block;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    article {
+        padding: 10px;
+    }
+
+    .data-item label {
+        font-size: 16px;
+        max-width: 100%; 
+    }
+
+    .dropdown-menu .dropdown-item {
+        font-size: 16px;
+        padding: 8px;
+        text-align: center;
+    }
+
+    #order-history {
+        max-width: 100%; 
+    }
+
+    #order-history li {
+        width: auto; 
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        width: auto;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .navbar-nav {
+        justify-content: space-between;
+        text-align: center;
+    }
+}

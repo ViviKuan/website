@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鮮花商務網站</title>
+    <link rel="stylesheet" href="../assets/CSS/cart_style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>花之悅</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="navbar-nav mb-2 mb-md-0 px-4">
+          <li class="nav-item mx-lg-3 pt-lg-5">
+              <a class="nav-link active" aria-current="page" href="../pages/index.html">首頁</a>
+          </li>
+          <li class="nav-item mx-lg-3 pt-lg-5 dropdown">
+              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              平價型 ▾
+              </a>
+              <ul class="dropdown-menu text-center">
+                  <li><a class="dropdown-item" href="../pages/item1.html">康乃馨</a></li>
+                  <li><a class="dropdown-item" href="../pages/item2.html">洋甘菊</a></li>
+                  <li><a class="dropdown-item" href="../pages/item3.html">勿忘我</a></li>
+              </ul>
+          </li>
+          <li class="nav-item mx-lg-3 pt-lg-5 dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            精緻型 ▾
+            </a>
+            <ul class="dropdown-menu text-center">
+                <li><a class="dropdown-item" href="../pages/item4.html">玫瑰</a></li>
+                <li><a class="dropdown-item" href="../pages/item5.html">洋桔梗</a></li>
+                <li><a class="dropdown-item" href="../pages/item6.html">向日葵</a></li>
+            </ul>
+        </li>
+        <li class="nav-item mx-lg-3 pt-lg-5 dropdown">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          奢華型 ▾
+          </a>
+          <ul class="dropdown-menu text-center">
+              <li><a class="dropdown-item" href="../pages/item7.html">鬱金香</a></li>
+              <li><a class="dropdown-item" href="../pages/item8.html">滿天星</a></li>
+              <li><a class="dropdown-item" href="../pages/item9.html">棉花</a></li>
+          </ul>
+      </li>
+          <li class="nav-item mx-lg-3 pt-lg-5">
+              <a class="nav-link active" aria-current="page" href="../pages/problem.html">常見問題</a>
+          </li>
+          <li class="nav-item mx-lg-3 pt-lg-5 nav-icon-md">
+              <a class="nav-link active nav-icon-md-1" aria-current="page" href="../pages/cart.html">
+              <img src="../assets/image/img/cart.png" width="35px">
+              </a>
+          </li>
+          <li class="nav-item mx-lg-3 pt-lg-5">
+            <a href="#" class="nav-link active nav-icon-md-1 padd-l-0" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../assets/image/img/person.png" width="40px">
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../pages/register.html">註冊</a></li>
+                <li><a class="dropdown-item" href="../pages/login.html">登入</a></li>
+                <li><a class="dropdown-item" href="../pages/profile.html">會員資料</a></li>
+            </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+        <h1>購物車</h1>
+        <div class="cart">
+            <div class="item">
+                <div class="item-info">
+                    <span class="item-name">康乃馨花束</span>
+                    <div class="spacer"></div>
+                    <div class="shopee-input-quantity">
+                        <button type="button" class="border-0 bt" onclick="reduce(this)">-</button>
+                        <input type="text" class="itemcount border-0 number" value="1" id="count">
+                        <button type="button" class="border-0 bt" onclick="add(this)">+</button>
+                    </div>
+                    <div class="spacer"></div>
+                    <span class="item-price">NT$500</span>
+                    <button type="button" class="border-0 delete-btn" onclick="deleteItem(this)">刪除</button>
+                </div>
+                <div class="item-info">
+                    <span class="item-name">洋甘菊花束</span>
+                    <div class="spacer"></div>
+                    <div class="shopee-input-quantity">
+                        <button type="button" class="border-0 bt" onclick="reduce(this)">-</button>
+                        <input type="text" class="itemcount border-0 number" value="1" id="count">
+                        <button type="button" class="border-0 bt" onclick="add(this)">+</button>
+                    </div>
+                    <div class="spacer"></div>
+                    <span class="item-price">NT$500</span>
+                    <button type="button" class="border-0 delete-btn" onclick="deleteItem(this)">刪除</button>
+                </div>
+                <div class="item-info">
+                    <span class="item-name">勿忘我花束</span>
+                    <div class="spacer"></div>
+                    <div class="shopee-input-quantity">
+                        <button type="button" class="border-0 bt" onclick="reduce(this)">-</button>
+                        <input type="text" class="itemcount border-0 number" value="1" id="count">
+                        <button type="button" class="border-0 bt" onclick="add(this)">+</button>
+                    </div>
+                    <div class="spacer"></div>
+                    <span class="item-price">NT$500</span>
+                    <button type="button" class="border-0 delete-btn" onclick="deleteItem(this)">刪除</button>
+                </div>
+                <div class="item-info">
+                    <span class="item-name">玫瑰花束</span>
+                    <div class="spacer"></div>
+                    <div class="shopee-input-quantity">
+                        <button type="button" class="border-0 bt" onclick="reduce(this)">-</button>
+                        <input type="text" class="itemcount border-0 number" value="1" id="count">
+                        <button type="button" class="border-0 bt" onclick="add(this)">+</button>
+                    </div>
+                    <div class="spacer"></div>
+                    <span class="item-price">NT$1,000</span>
+                    <button type="button" class="border-0 delete-btn" onclick="deleteItem(this)">刪除</button>
+                </div>
+                <div class="item-info">
+                    <span class="item-name">洋桔梗花束</span>
+                    <div class="spacer"></div>
+                    <div class="shopee-input-quantity">
+                        <button type="button" class="border-0 bt" onclick="reduce(this)">-</button>
+                        <input type="text" class="itemcount border-0 number" value="1" id="count">
+                        <button type="button" class="border-0 bt" onclick="add(this)">+</button>
+                    </div>
+                    <div class="spacer"></div>
+                    <span class="item-price">NT$1,000</span>
+                    <button type="button" class="border-0 delete-btn" onclick="deleteItem(this)">刪除</button>
+                </div>
+                <div class="item-info">
+                    <span class="item-name">向日葵花束</span>
+                    <div class="spacer"></div>
+                    <div class="shopee-input-quantity">
+                        <button type="button" class="border-0 bt" onclick="reduce(this)">-</button>
+                        <input type="text" class="itemcount border-0 number" value="1" id="count">
+                        <button type="button" class="border-0 bt" onclick="add(this)">+</button>
+                    </div>
+                    <div class="spacer"></div>
+                    <span class="item-price">NT$1,000</span>
+                    <button type="button" class="border-0 delete-btn" onclick="deleteItem(this)">刪除</button>
+                </div>
+                <div class="item-info">
+                    <span class="item-name">鬱金香花束</span>
+                    <div class="spacer"></div>
+                    <div class="shopee-input-quantity">
+                        <button type="button" class="border-0 bt" onclick="reduce(this)">-</button>
+                        <input type="text" class="itemcount border-0 number" value="1" id="count">
+                        <button type="button" class="border-0 bt" onclick="add(this)">+</button>
+                    </div>
+                    <div class="spacer"></div>
+                    <span class="item-price">NT$1,500</span>
+                    <button type="button" class="border-0 delete-btn" onclick="deleteItem(this)">刪除</button>
+                </div>
+                <div class="item-info">
+                    <span class="item-name">滿天星花束</span>
+                    <div class="spacer"></div>
+                    <div class="shopee-input-quantity">
+                        <button type="button" class="border-0 bt" onclick="reduce(this)">-</button>
+                        <input type="text" class="itemcount border-0 number" value="1" id="count">
+                        <button type="button" class="border-0 bt" onclick="add(this)">+</button>
+                    </div>
+                    <div class="spacer"></div>
+                    <span class="item-price">NT$1,500</span>
+                    <button type="button" class="border-0 delete-btn" onclick="deleteItem(this)">刪除</button>
+                </div>
+                <div class="item-info">
+                    <span class="item-name">棉花花束</span>
+                    <div class="spacer"></div>
+                    <div class="shopee-input-quantity">
+                        <button type="button" class="border-0 bt" onclick="reduce(this)">-</button>
+                        <input type="text" class="itemcount border-0 number" value="1" id="count">
+                        <button type="button" class="border-0 bt" onclick="add(this)">+</button>
+                    </div>
+                    <div class="spacer"></div>
+                    <span class="item-price">NT$1,500</span>
+                    <button type="button" class="border-0 delete-btn" onclick="deleteItem(this)">刪除</button>
+                </div>
+            </div>
+        </div>
+        <div class="checkout">
+            <!-- 購買資訊 -->
+            
+            <form class="checkout-form">
+                <h2>買家資訊</h2>
+                <label for="name">姓名:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">電子郵件:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="address">地址:</label>
+                <textarea id="address" name="address" rows="4" required></textarea><br>
+                
+                <button type="submit" class="checkout-btn">確認結帳</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <h4>桃園市中壢區中北路200號 TEL:0912345678</h4>
+        <p><a href="../pages/aboutus.html">關於我們</a></p>
+        <p><a href="../pages/payment.html">付款方式</a></p>
+        <p><a href="../pages/return.html">退貨款政策</a></p>
+    </footer>
+    <script src="../assets/JS/cart.js"></script>
+</body>
+</html>
+

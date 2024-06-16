@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鮮花商務網站</title>
+    <link rel="stylesheet" href="../assets/CSS/item_style.css">
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>花之悅</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="navbar-nav mb-2 mb-md-0 px-4">
+          <li class="nav-item mx-lg-3 pt-lg-5">
+              <a class="nav-link active" aria-current="page" href="../pages/index.html">首頁</a>
+          </li>
+          <li class="nav-item mx-lg-3 pt-lg-5 dropdown">
+              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              平價型 ▾
+              </a>
+              <ul class="dropdown-menu text-center">
+                  <li><a class="dropdown-item" href="../pages/item1.html">康乃馨</a></li>
+                  <li><a class="dropdown-item" href="../pages/item2.html">洋甘菊</a></li>
+                  <li><a class="dropdown-item" href="../pages/item3.html">勿忘我</a></li>
+              </ul>
+          </li>
+          <li class="nav-item mx-lg-3 pt-lg-5 dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            精緻型 ▾
+            </a>
+            <ul class="dropdown-menu text-center">
+                <li><a class="dropdown-item" href="../pages/item4.html">玫瑰</a></li>
+                <li><a class="dropdown-item" href="../pages/item5.html">洋桔梗</a></li>
+                <li><a class="dropdown-item" href="../pages/item6.html">向日葵</a></li>
+            </ul>
+        </li>
+        <li class="nav-item mx-lg-3 pt-lg-5 dropdown">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          奢華型 ▾
+          </a>
+          <ul class="dropdown-menu text-center">
+              <li><a class="dropdown-item" href="../pages/item7.html">鬱金香</a></li>
+              <li><a class="dropdown-item" href="../pages/item8.html">滿天星</a></li>
+              <li><a class="dropdown-item" href="../pages/item9.html">棉花</a></li>
+          </ul>
+      </li>
+          <li class="nav-item mx-lg-3 pt-lg-5">
+              <a class="nav-link active" aria-current="page" href="../pages/problem.html">常見問題</a>
+          </li>
+          <li class="nav-item mx-lg-3 pt-lg-5 nav-icon-md">
+              <a class="nav-link active nav-icon-md-1" aria-current="page" href="../pages/cart.html">
+              <img src="../assets/image/img/cart.png" width="35px">
+              </a>
+          </li>
+          <li class="nav-item mx-lg-3 pt-lg-5">
+            <a href="#" class="nav-link active nav-icon-md-1 padd-l-0" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../assets/image/img/person.png" width="40px">
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../pages/register.html">註冊</a></li>
+                <li><a class="dropdown-item" href="../pages/login.html">登入</a></li>
+                <li><a class="dropdown-item" href="../pages/profile.html">會員資料</a></li>
+            </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <article>
+        <section class="card">
+            <div class="flex1">
+                <div class="picture">
+                    <img class="item_image1" src="../assets/image/img/carnation.jpg" alt="Carnation">
+                </div>
+                <div class="flex2">
+                    <div class="text">
+                        <h3>品名:康乃馨花束</h3>
+                    </div>
+                    <div class="text2">
+                        <p>簡介:康乃馨象徵愛、魅力和尊敬，是母親節的常見花卉。它們色彩豐富，花期持久，適合表達感謝和愛意。</p>
+                        <p>特點:色彩多樣，價格實惠，花期長。</p>
+                        <p>用途:母親節、感恩節、生日</p>
+                        <p>建議售價:NT$500</p>
+                        <p>庫存:100</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 text-center ccol-1">
+                <div class="shopee-input-quantity">
+                    <button type="button" class="border-0 bt" id="reduce" onclick="reduce()">-</button>
+                    <input type="text" class="itemcount border-0 number" value="1" id="count">
+                    <button type="button" class="border-0 bt" id="add" onclick="add()">+</button>
+                </div>
+                <button id="addtoshoppingcart" type="submit" class="col-12 mt-4" onclick="addToCart()" style="background-color:#cb8282; border-radius: 5px;">
+                    <img src="../assets/image/img/cart.png" class="cartimg" alt="Cart"> 加入購物車
+                </button>
+            </div>
+        </section>
+        
+        <!-- 新增評論部分 -->
+        <section class="reviews">
+            <h2>評論:</h2>
+            <div class="review">
+                <div class="review-header">
+                    <span class="review-author">留言者: 小明</span>
+                    <span class="review-date">日期: 2024-05-29</span>
+                    <div class="star" id="star-rating1">
+                        <iconify-icon icon="mdi:star" width="40" data-index="5" class="star-icon"></iconify-icon>
+                        <iconify-icon icon="mdi:star" width="40" data-index="5" class="star-icon"></iconify-icon>
+                        <iconify-icon icon="mdi:star" width="40" data-index="5" class="star-icon"></iconify-icon>
+                        <iconify-icon icon="mdi:star" width="40" data-index="5" class="star-icon"></iconify-icon>
+                        <iconify-icon icon="mdi:star" width="40" data-index="5" class="star-icon"></iconify-icon>
+                    </div>
+                </div>
+                <p class="review-text">非常漂亮的花束，送給媽媽她很喜歡！</p>
+            </div>
+            
+            <div class="review">
+                <div class="review-header">
+                    <span class="review-author">留言者: 小華</span>
+                    <span class="review-date">日期: 2024-05-28</span>
+                    <div class="star" id="star-rating2">
+                        <iconify-icon icon="mdi:star" width="40" data-index="3" class="star-icon"></iconify-icon>
+                        <iconify-icon icon="mdi:star" width="40" data-index="3" class="star-icon"></iconify-icon>
+                        <iconify-icon icon="mdi:star" width="40" data-index="3" class="star-icon"></iconify-icon>
+                        <iconify-icon icon="mdi:star-outline" width="40" data-index="1" class="star-icon"></iconify-icon>
+                        <iconify-icon icon="mdi:star-outline" width="40" data-index="1" class="star-icon"></iconify-icon>
+                    </div>
+                </div>
+                <p class="review-text">花很新鮮，但是送達時間有點晚。</p>
+            </div>
+
+            <!-- 新增留言表單 -->
+            <div class="card2">
+                <form id="comment-form" class="comment-form">
+                    <label for="comment-name">姓名:</label><br>
+                    <input type="text" id="comment-name" name="comment-name"><br>
+    
+                    <label for="comment-content">評論:</label><br>
+                    <textarea id="comment-content" name="comment-content" rows="10" cols="70"></textarea><br>
+    
+                    <label for="comment-rating">星等:</label><br>
+                    <div class="star-rating" id="comment-rating">
+                        <iconify-icon icon="mdi:star-outline" width="40" data-index="1" class="star-icon" onclick="setRating(1)"></iconify-icon>
+                        <iconify-icon icon="mdi:star-outline" width="40" data-index="2" class="star-icon" onclick="setRating(2)"></iconify-icon>
+                        <iconify-icon icon="mdi:star-outline" width="40" data-index="3" class="star-icon" onclick="setRating(3)"></iconify-icon>
+                        <iconify-icon icon="mdi:star-outline" width="40" data-index="4" class="star-icon" onclick="setRating(4)"></iconify-icon>
+                        <iconify-icon icon="mdi:star-outline" width="40" data-index="5" class="star-icon" onclick="setRating(5)"></iconify-icon>
+                    </div><br>
+                    <div class="submit-container">
+                        <input type="submit" value="提交">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </article>
+    <footer>
+        <h4>桃園市中壢區中北路200號 TEL:0912345678</h4>
+        <p><a href="../pages/aboutus.html">關於我們</a></p>
+        <p><a href="../pages/payment.html">付款方式</a></p>
+        <p><a href="../pages/return.html">退貨款政策</a></p>
+    </footer>
+    <script src="../assets/JS/item.js"></script>
+    <script src="../assets/JS/item2.js"></script>
+    <script src="../assets/JS/item3.js"></script>
+</body>
+</html>

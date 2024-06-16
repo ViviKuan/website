@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FF8FA3;
+    margin: 0;
+    font-family: "標楷體";
+    line-height: 1.2;
+}
+
+header {
+    background-image: linear-gradient(to bottom, #da627d, #FBB1BD);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #FF8FA3;
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0; 
+    background-color: #F7CAD0;
+    border: 1px solid transparent;
+    border-radius: 0;
+    width: 130px;
+    z-index: 1;
+}
+
+.dropdown-menu .dropdown-item {
+    font-size: 20px;
+    color: #e29578;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: inline-block;
+    font-size: 30px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+    display: block;
+}
+
+footer {
+    background-color: #F7CAD0;
+    color: #444444;
+    text-align: center;
+    padding: 25px;
+}
+
+article {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: floatIn 1s ease-in-out forwards;
+}
+
+@keyframes floatIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    flex: 1;
+    max-width: 45%;
+    border-radius: 10px;
+    border: 2px solid #444444;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #444444;
+    background-color: #e1dcd4;
+}
+
+.section h2 {
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.section li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+/* 小型裝置（例如手機） */
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 10px 0; 
+    }
+    
+    nav {
+        padding: 10px 0; 
+    }
+
+    .navbar-nav {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; /* 新增的屬性 */
+    }
+
+    .nav-item {
+        margin-bottom: 10px; 
+        width: 100%; 
+    }
+
+    .dropdown-menu {
+        position: static; 
+        width: 100%; 
+        box-shadow: none; 
+        border: none; 
+    }
+
+    .nav-item:hover .dropdown-menu {
+        display: block; 
+    }
+
+    .nav-link {
+        font-size: 18px; 
+        padding: 10px; 
+    }
+
+    footer {
+        padding: 15px; 
+    }
+ 
+    article {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* 中型裝置（例如平板） */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    article {
+        flex-wrap: wrap;
+    }
+    .section {
+        max-width: 48%;
+        margin-bottom: 20px;
+    }
+}
+
+/* 大型裝置（例如桌面） */
+@media only screen and (min-width: 1025px) {
+    article {
+        justify-content: space-around;
+    }
+}
